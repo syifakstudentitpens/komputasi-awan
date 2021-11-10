@@ -1,0 +1,53 @@
+<html>
+<head><title>Perhitungan nilai komputasi Awan</title></head>
+<body>
+    <p><script language="javascript">
+function jumlah()
+{
+    var bil1=parseFloat (document.fform.bilangan1.value);
+    if (isNaN(bil1))
+        bil1=0.0;
+    var bil2=parseFloat (document.fform.bilangan2.value);
+    if (isNaN(bil2))
+        bil2=0.0;
+    var bil3=parseFloat (document.fform.bilangan3.value);
+    if (isNaN(bil3))
+        bil3=0.0;
+    var Nilai_Akhir=(((2*bil1) + (3*bil2) + (5*bil3))/10)
+    alert("Nilai Akhir Anda = " + Nilai_Akhir);
+    if(Nilai_Akhir>=80)
+        {
+        alert("A = Selamat Anda LULUS" );
+        }
+        else if (Nilai_Akhir>=70)
+        {
+        alert("B = Selamat Anda LULUS" );
+        }
+        else if (Nilai_Akhir>=59)
+        {
+        alert("C = Selamat Anda LULUS");
+        }
+        else if (Nilai_Akhir>=49)
+        {
+        alert("D = Anda TIDAK LULUS");
+        }
+        else
+        {
+        alert("E = Anda TIDAK LULUS");
+        }   
+        location.reload();
+}
+//--></script></p>
+<FORM NAME="fform">
+    <H1><BR>Masukkan Nilai Anda : </H1>
+    <PRE>
+        Nilai Tugas        :<input type="text" size="11" name="bilangan1">
+        Nilai UTS        :<input type="text" size="11" name="bilangan2">
+        Nilai UAS        :<input type="text" size="11" name="bilangan3">
+    </PRE>
+    <P>
+        <input type="button" value="jumlahkan" onclick="jumlah()">
+        <input type="reset" value="ulang">
+    </FORM>
+</BODY>
+</HTML>
